@@ -11,39 +11,77 @@
     <version>1.0.1</version>
 
     <properties>
-        <fest-assert.version>1.4</fest-assert.version>
         <guava.version>11.0.1</guava.version>
-        <junit.version>4.8.2</junit.version>
         <validation-api.version>1.0.0.GA</validation-api.version>
+        <util.version>1.0.0</util.version>
+
+        <!--TEST-->
+        <fest-assert.version>1.4</fest-assert.version>
+        <junit.version>4.8.2</junit.version>
+        <mockito-all.version>1.8.5</mockito-all.version>
     </properties>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>com.google.guava</groupId>
+                <artifactId>guava</artifactId>
+                <version>${guava.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>javax.validation</groupId>
+                <artifactId>validation-api</artifactId>
+                <version>${validation-api.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.easytesting</groupId>
+                <artifactId>fest-assert</artifactId>
+                <version>${fest-assert.version}</version>
+                <scope>test</scope>
+            </dependency>
+            <dependency>
+                <groupId>junit</groupId>
+                <artifactId>junit</artifactId>
+                <version>${junit.version}</version>
+                <scope>test</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.xbucchiotty</groupId>
+                <artifactId>utils</artifactId>
+                <version>${util.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.mockito</groupId>
+                <artifactId>mockito-all</artifactId>
+                <version>${mockito-all.version}</version>
+                <scope>test</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
 
     <dependencies>
         <dependency>
             <groupId>com.google.guava</groupId>
             <artifactId>guava</artifactId>
-            <version>${guava.version}</version>
         </dependency>
         <dependency>
             <groupId>javax.validation</groupId>
             <artifactId>validation-api</artifactId>
-            <version>${validation-api.version}</version>
         </dependency>
         <dependency>
             <groupId>org.easytesting</groupId>
             <artifactId>fest-assert</artifactId>
-            <version>${fest-assert.version}</version>
             <scope>test</scope>
         </dependency>
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
-            <version>${junit.version}</version>
             <scope>test</scope>
         </dependency>
         <dependency>
             <groupId>org.xbucchiotty</groupId>
             <artifactId>utils</artifactId>
-            <version>1.0.0</version>
+            <version>${util.version}</version>
         </dependency>
     </dependencies>
 
