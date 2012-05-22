@@ -7,8 +7,8 @@
     <packaging>pom</packaging>
 
     <artifactId>parent</artifactId>
-    <groupId>org.xbucchioty</groupId>
-    <version>1.0.0-SNAPSHOT</version>
+    <groupId>org.xbucchiotty</groupId>
+    <version>1.0.1</version>
 
     <properties>
         <fest-assert.version>1.4</fest-assert.version>
@@ -41,6 +41,11 @@
                 <version>${junit.version}</version>
                 <scope>test</scope>
             </dependency>
+	    <dependency>
+		<groupId>org.xbucchiotty</groupId>
+		<artifactId>utils</artifactId>
+		<version>1.0.0</version>
+  	   </dependency>
         </dependencies>
     </dependencyManagement>
 </project>
