@@ -78,11 +78,6 @@
             <artifactId>junit</artifactId>
             <scope>test</scope>
         </dependency>
-        <dependency>
-            <groupId>org.xbucchiotty</groupId>
-            <artifactId>utils</artifactId>
-            <version>${util.version}</version>
-        </dependency>
     </dependencies>
 
 </project>
